@@ -1,8 +1,6 @@
 package guru.springframework;
 
-public class Frank {
-
-    private int amount;
+public class Frank  extends Money{
 
     public Frank(int amount){
         this.amount = amount;
@@ -13,8 +11,4 @@ public class Frank {
         return new Frank(amount*multiple);
     }
 
-    public boolean equals(Object object){
-        Frank frank = (Frank) object;
-        return amount == frank.amount;
-    }
 }
