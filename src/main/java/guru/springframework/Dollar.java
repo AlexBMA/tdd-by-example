@@ -9,7 +9,7 @@ public class Dollar {
 
     }
 
-    void times(int multiple){
-        this.amount *= multiple;
+    Dollar times(int multiple){
+        return new Dollar(amount*multiple);
     }
 }
