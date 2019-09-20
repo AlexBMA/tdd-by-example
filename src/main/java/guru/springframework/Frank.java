@@ -2,12 +2,12 @@ package guru.springframework;
 
 public class Frank  extends Money{
 
-    public Frank(int amount){
-        this.amount = amount;
+    public Frank(int amount, String currency){
+        super(amount,currency);
     }
 
     public Money times(int multiple){
-        return new Frank(amount*multiple);
+        return Money.frank(amount*multiple);
     }
 
 }
