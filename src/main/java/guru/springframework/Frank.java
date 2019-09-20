@@ -6,8 +6,4 @@ public class Frank  extends Money{
         super(amount,currency);
     }
 
-    public Money times(int multiple){
-        return Money.frank(amount*multiple);
-    }
-
 }
