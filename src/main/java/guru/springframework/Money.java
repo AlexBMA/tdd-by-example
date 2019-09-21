@@ -30,6 +30,11 @@ public class Money implements Expresion{
     }
 
     @Override
+    public Money reduce(String to){
+        return Money.dollar(1);
+    }
+
+    @Override
     public String toString() {
         return "Money{" +
                 "amount=" + amount +
@@ -42,6 +47,9 @@ public class Money implements Expresion{
     }
 
     public Expresion plus(Money added){
-        return new Money(amount + added.amount,currency);
+        return new Sum(this, added);
+        //return new Sum(amount + added.amount,this.currency);
     }
+
+
 }
