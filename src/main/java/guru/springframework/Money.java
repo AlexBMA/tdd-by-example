@@ -31,7 +31,8 @@ public class Money implements Expresion{
 
     @Override
     public Money reduce(String to){
-        return Money.dollar(1);
+        int rate = (currency.equals("CHF") && to.equals("USD")) ? 2: 1;
+        return new Money(amount/rate,to);
     }
 
     @Override
