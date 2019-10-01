@@ -43,13 +43,12 @@ public class Money implements Expresion{
                 '}';
     }
 
-    public Money times(int multiple){
+    public Expresion times(int multiple){
         return new Money(amount * multiple, this.currency);
     }
 
-    public Expresion plus(Money added){
-        return new Sum(this, added);
-        //return new Sum(amount + added.amount,this.currency);
+    public Expresion plus(Expresion addend){
+        return new Sum(this, addend);
     }
 
 
