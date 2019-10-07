@@ -19,6 +19,11 @@ public class Sum implements Expresion{
 
     @Override
     public Expresion plus(Expresion addend) {
-        return null;
+        return new Sum(this,addment);
+    }
+
+    @Override
+    public Expresion times(int multiple) {
+        return new Sum(augment.times(multiple), addment.times(multiple));
     }
 }
